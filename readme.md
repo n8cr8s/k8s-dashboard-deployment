@@ -33,7 +33,7 @@ kubectl get secret admin-user -n kubernetes-dashboard -o jsonpath={".data.token"
 
 ## Start Proxy
 ```
-kubectl proxy
+kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-kong-proxy 8443:443
 ```
 
-Go to browser and open http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+[https://localhost:8443/](Kubernetes Dashboard)
