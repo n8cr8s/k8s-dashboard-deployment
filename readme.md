@@ -37,3 +37,10 @@ kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-kong-proxy
 ```
 
 [Kubernetes Dashboard](https://localhost:8443/)
+
+
+## Remove Dashboard
+
+```
+helm delete kubernetes-dashboard --namespace kubernetes-dashboard
+```
